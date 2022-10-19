@@ -1,0 +1,4 @@
+Test-Command: echo Ok | txt2html --title 'Testing txt2html' | egrep '<p>Ok</p>' -C 40 | grep Testing
+
+Test-Command: dh_auto_test
+Depends: @, debhelper, libmodule-build-perl

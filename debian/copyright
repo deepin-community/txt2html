@@ -1,0 +1,31 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: txt2html
+Source: https://github.com/resurrecting-open-source-projects/txt2html or
+        https://sourceforge.net/projects/txt2html/ or
+        https://metacpan.org/release/RUBYKAT/txt2html-2.5201
+
+Files: *
+Copyright: 1994-2000 Seth Golub <seth@aigeek.com>
+           2002-2013 Kathryn Andersen <perlkat@katspace.org, rubykat@cpan.org>
+           2018-2019 Joao Eriberto Mota Filho <eriberto@debian.org>
+License: Perl
+
+Files: debian/*
+Copyright: 2001-2004 Sami Haahtinen <ressu@debian.org>
+           2005      Florian Ernst <florian@debian.org>
+           2006      Jose Carlos Medeiros <debian@psabs.com.br>
+           2006-2007 Torsten Werner <twerner@debian.org>
+           2006-2008 Varun Hiremath <varun@debian.org>
+           2018-2021 Joao Eriberto Mota Filho <eriberto@debian.org>
+License: Perl
+
+License: Perl
+ It is free software; you can redistribute it and/or modify it under the terms
+ of either:
+ .
+   a) the GNU General Public License as published by the Free Software
+      Foundation; either version 1, or (at your option) any later version, or
+   b) the "Artistic License".
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 1 and Artistic can be found in "/usr/share/common-licenses/".

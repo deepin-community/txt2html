@@ -1,0 +1,263 @@
+txt2html (1:2.53-3) unstable; urgency=medium
+
+  * debian/control:
+      - Bumped Standards-Version to 4.5.1.
+      - Migrated DH level to 13.
+  * debian/copyright: updated packaging copyright years.
+  * debian/upstream/metadata: created.
+  * debian/watch: updated the search rule to make it compliant with new
+    standards of the GitHub.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sun, 22 Aug 2021 18:33:51 -0300
+
+txt2html (1:2.53-2) unstable; urgency=medium
+
+  * debian/control:
+      - Added 'Rules-Requires-Root: no' to source stanza.
+      - Bumped Standards-Version to 4.5.0.
+  * debian/copyright: updated packaging copyright years.
+  * debian/salsa-ci.yml: added to provide CI tests for Salsa.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Thu, 13 Feb 2020 17:51:49 -0300
+
+txt2html (1:2.53-1) unstable; urgency=medium
+
+  * New upstream version 1:2.53.
+  * epoch: added 1: to accept version changes from the upstream.
+  * New upstream homepage. (Closes: #930381)
+  * Using new DH level format. Consequently:
+      - debian/compat: removed.
+      - debian/control: changed from 'debhelper' to 'debhelper-compat' in
+        Build-Depends field and bumped level to 12.
+  * debian/clean: no longer needed. Removed.
+  * debian/control: bumped Standards-Version to 4.4.0.
+  * debian/copyright: updated upstream and packaging data.
+  * debian/docs:
+      - Added CONTRIBUTING.md and README.txt2html.
+      - Renamed README to README.md.
+  * debian/patches/*: removed all patches. The upstream fixed the source
+    code. Thanks!
+  * debian/rules: removed no longer needed override_dh_installchangelogs
+    target.
+  * debian/tests/control: added a new test.
+  * debian/watch: updated to use the new upstream homepage.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Fri, 02 Aug 2019 22:49:58 -0300
+
+txt2html (2.5201-1) unstable; urgency=medium
+
+  * New upstream version 2.5201.
+  * Migrations:
+      - DebSrc to 3.0 (quilt).
+      - DH level to 11.
+  * Run wrap-and-sort.
+  * debian/clean: added to remove the temporary file debian/upstream.changelog,
+    created by debian/rules.
+  * debian/control:
+      - Added myself as new co-maintainer.
+      - Bumped Standards-Version to 4.2.1.
+      - Added ${misc:Depends} variable.
+      - Moved libmodule-build-perl from Build-Depends-Indep to Build-Depends
+        field.
+      - Using Salsa to control packaging versions.
+  * debian/copyright:
+      - Migrated to 1.0 format. (Closes: #718678)
+      - Updated all names and years.
+  * debian/patches/:
+      - 10_fix-spelling.patch: added to fix some spelling errors.
+      - 20_fix-perl-path.patch: fix the path for Perl.
+  * debian/rules:
+      - Migrated to reduced format.
+      - Created override_dh_installchangelogs to install the full upstream
+        changelog.
+  * debian/tests/control: created to perform complete tests from upstream.
+  * debian/watch:
+      - Added a new download source. (Closes: #782239)
+      - Updated version to 4.
+      - Using secure URI.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Tue, 20 Nov 2018 00:01:56 -0200
+
+txt2html (2.51-1) unstable; urgency=low
+
+  * New upstream release
+    + Fixes: <U> injected into href, invalid HTML (Closes: #476168)
+    + Fixes: unknown option --escape_chars listed on manpage (Closes: #475593)
+    + Fixes: manpage --doctype (Closes: #476164)
+  * debian/rules: remove .packlist file
+
+ -- Varun Hiremath <varun@debian.org>  Sun, 04 May 2008 22:02:47 +0530
+
+txt2html (2.50-2) unstable; urgency=low
+
+  * Add libyaml-syck-perl to Depends (Closes: #457514)
+
+ -- Varun Hiremath <varun@debian.org>  Sun, 23 Dec 2007 15:50:16 +0530
+
+txt2html (2.50-1) unstable; urgency=low
+
+  [ Varun Hiremath ]
+  * debian/control: remove Lionel Elie Mamane from Uploaders.
+
+  [ Torsten Werner ]
+  * new upstream release
+  * Set Standards-Version: 3.7.3.
+  * Add Build-Depends: libtest-distribution-perl, libyaml-syck-perl.
+  * Do not install .packlist file.
+  * Do not remove Makefile.PL during build.
+
+ -- Torsten Werner <twerner@debian.org>  Sat, 22 Dec 2007 11:15:45 +0100
+
+txt2html (2.46-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: Add Homepage header and replace XS-Vcs with Vcs.
+
+ -- Varun Hiremath <varunhiremath@gmail.com>  Thu, 29 Nov 2007 18:32:45 +0530
+
+txt2html (2.45-1) unstable; urgency=low
+
+  * New upstream release
+  * txt2html now supports UTF-8 (Closes: #406818)
+
+ -- Varun Hiremath <varunhiremath@gmail.com>  Sat, 27 Jan 2007 00:12:15 +0530
+
+txt2html (2.44-4) unstable; urgency=low
+
+  * Add XS-X-Vcs-Svn header in debian/control
+  * Update debian/watch to version 3
+  * debian/control: indent Homepage with two spaces
+
+ -- Varun Hiremath <varunhiremath@gmail.com>  Thu, 16 Nov 2006 15:03:41 +0530
+
+txt2html (2.44-3) unstable; urgency=low
+
+  * Bump Standards-Version to 3.7.2
+
+ -- Varun Hiremath <varunhiremath@gmail.com>  Tue,  5 Sep 2006 22:05:35 +0530
+
+txt2html (2.44-2) unstable; urgency=low
+
+  [ Varun Hiremath ]
+  * New maintainer (Closes: #382557)
+
+  [ Torsten Werner ]
+  * add myself to Uploaders
+
+ -- Torsten Werner <twerner@debian.org>  Thu, 17 Aug 2006 02:51:20 +0200
+
+txt2html (2.44-1) unstable; urgency=low
+
+  * New maintainer. (closes: #344459)
+  * Remark file as optional in SYNOPSIS in manpage. (closes: #340545)
+  * Added information about --manpage option. (Closes: #285379)
+  * Added perl-doc as suggested to be used with --manpage option.
+  * New Upstream Release.
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Tue, 17 Jan 2006 09:45:43 -0200
+
+txt2html (2.43-1) unstable; urgency=low
+
+  * New maintainer (Closes: #294849, hijacking David Alexander Contreras' ITA
+    with his consent)
+    - redo debianization, including valid license pointer (Closes: #281034)
+  * New upstream release (Closes: #262281)
+    - allows creating tags with accent keys (Closes: #246230)
+    - needs libmodule-build-perl as B-D-I
+
+ -- Florian Ernst <florian@debian.org>  Tue, 18 Oct 2005 16:46:02 +0200
+
+txt2html (2.23-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Sami Haahtinen <ressu@debian.org>  Sat, 13 Mar 2004 20:44:34 +0200
+
+txt2html (2.21-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump up Policy-Version.
+    - Fix Build-Depends-Indep to Build-Depends
+  * Change libgetopt-argfile-perl in to libgetopt-argvfile-perl per bug
+    #219183
+
+ -- Sami Haahtinen <ressu@debian.org>  Sat, 21 Feb 2004 11:25:10 +0200
+
+txt2html (2.20-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Sami Haahtinen <ressu@debian.org>  Sun,  7 Dec 2003 21:08:31 +0200
+
+txt2html (2.06-2) unstable; urgency=low
+
+  * Fix build depends, as cdbs doesn't depend on debhelper, we depend on it.
+    (Closes: #221097)
+
+ -- Sami Haahtinen <ressu@debian.org>  Sun, 16 Nov 2003 19:45:41 +0200
+
+txt2html (2.06-1) unstable; urgency=low
+
+  * New upstream release
+  * txt2html now uses stdin as input again. (Closes: #220879)
+
+ -- Sami Haahtinen <ressu@debian.org>  Sun, 16 Nov 2003 15:31:40 +0200
+
+txt2html (2.05-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Sami Haahtinen <ressu@debian.org>  Wed,  5 Nov 2003 18:26:33 +0200
+
+txt2html (2.03-1) unstable; urgency=low
+
+  * New upstream release.
+    Never uploaded due to unsatisfiable dependencies.
+
+ -- Sami Haahtinen <ressu@debian.org>  Sun, 26 Oct 2003 17:09:49 +0200
+
+txt2html (1.35-1) unstable; urgency=low
+
+  * New upstream release (Closes: #190550)
+    The development has moved to SourceForge, so lets mark that as upstream
+    location.
+  * Improved the manual (Closes: #179383)
+  * Bump the Standards-Version to 3.5.9, No Changes.
+
+ -- Sami Haahtinen <ressu@debian.org>  Thu, 24 Apr 2003 20:49:59 +0300
+
+txt2html (1.28-6) unstable; urgency=low
+
+  * Bumped standards version to 3.5.7
+
+ -- Sami Haahtinen <ressu@debian.org>  Fri, 13 Sep 2002 13:31:25 +0300
+
+txt2html (1.28-5) unstable; urgency=low
+
+  * Added Manual, thanks to Uwe Hermann (Closes: #134240)
+
+ -- Sami Haahtinen <ressu@debian.org>  Sat, 16 Feb 2002 20:14:00 +0200
+
+txt2html (1.28-4) unstable; urgency=low
+
+  * Updated Standards-Version to 3.5.5
+
+ -- Sami Haahtinen <ressu@debian.org>  Fri, 22 Jun 2001 12:04:54 +0300
+
+txt2html (1.28-3) unstable; urgency=low
+
+  * Fixed Architecture to all instead of any (Closes: #92568)
+
+ -- Sami Haahtinen <ressu@debian.org>  Mon,  2 Apr 2001 18:54:05 +0300
+
+txt2html (1.28-2) unstable; urgency=low
+
+  * Fixed the messed up maintainer address.
+
+ -- Sami Haahtinen <ressu@debian.org>  Fri, 30 Mar 2001 09:39:10 +0300
+
+txt2html (1.28-1) unstable; urgency=low
+
+  * Initial release. (Closes: #91309)
+
+ -- Sami Haahtinen <ressu@debian.org>  Fri, 30 Mar 2001 09:38:50 +0300
